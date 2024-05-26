@@ -313,14 +313,14 @@ if st.button(f"Visualize Frequency of {selected_column}"):
     ax.set_ylabel('Frequency')
     st.write(fig)
 
-show_distribution_plot = st.checkbox('Show 2024 Sale Price Distribution Plot')
+show_distribution_plot = st.checkbox('Show 2019 Sale Price Distribution Plot')
 
 if show_distribution_plot:
-    # Filter data for the year 2024
-    data_2024 = df[df['year'] == 2024]
+    # Filter data for the year 2019
+    data_2019 = df[df['year'] == 2019]
     fig = plt.figure(figsize=(10, 5))
-    plt.title("2024 Sale Price Distributions")
-    sb.distplot(data_2024['selling_price'])
+    plt.title("2019 Sale Price Distributions")
+    sb.distplot(data_2019['selling_price'])
     st.write(fig)
 
 # Train & Test
